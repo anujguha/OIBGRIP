@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #333;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fade-in 0.5s ease;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  input[type="text"] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #555;
+    background-color: #444;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #999;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+    padding: 12px 20px;
+    background-color: #444343;
+    color:#fff;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    animation: slide-in 0.5s ease;
+  }
+  
+  li:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    border: 2px solid #4CAF50;
+  }
+  
+  li.completed:before {
+    content: "\2713";
+    color: #4CAF50;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  li:last-child {
+    margin-bottom: 0;
+  }
+  
+  li:hover {
+    background-color: #444;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  .delete {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #bbb;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  li:hover .delete {
+    opacity: 1;
+  }
+  
+  .delete:hover {
+    color: #f44336;
+  }
+  
